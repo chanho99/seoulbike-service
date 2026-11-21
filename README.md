@@ -1,2 +1,2 @@
-# OpenSource
-★2학년1학기 오픈소스기초프로젝트★
+# Seoulbike Service
+> 따릉이 정보 서비스
