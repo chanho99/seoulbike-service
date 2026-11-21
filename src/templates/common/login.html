@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'common/css/style2.css' %}">
+    <title>로그인 페이지</title>
+</head>
+<body>
+    <div class="main_form">
+        <img src="{% static 'main/image/logo.png' %}" style="width:300px;">
+        <form action="/common/login/" method="post">
+            {% csrf_token %}
+            {% include "form_errors.html" %}
+            <p><input class="login" type="text" name="username" placeholder="아이디" required></p>
+            <p><input class="login" type="password" name="password" placeholder="비밀번호" required></p>
+            <p><input class="btn" type="submit" value="로그인"></p>
+        </form>
+
+        <p>아직 계정이 없으신가요?  <a href="/common/register">회원가입</a></p> <!--link-->
+    </div>
+
+
+</body>
+</html>
